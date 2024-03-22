@@ -15,7 +15,7 @@ stages {
             deleteDir()
             // Clone git repo 
             git branch: 'main'
-            url: git@github.com:reflection21/devops-project-1.git
+            url: 'https://github.com/reflection21/devops-project-1.git'
             // ll
             sh "ls -lart"
         }
@@ -66,13 +66,14 @@ stage('Terraform destroy'){
                     dir('infrastructure') {
                         sh 'echo "=================Terraform Destroy=================="'
                         sh 'terraform destroy -auto-approve'
+                            }
+                        }
                     }
                 }
             }
         }
     }
 }
-
 
 
 
