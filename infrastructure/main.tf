@@ -34,7 +34,7 @@ module "rds_db_instance" {
   mysql_username       = "dbuser"
   mysql_password       = "dbpassword"
   mysql_dbname         = "devprojdb"
-  public_key           = var.public_key
+
 
 }
 module "lb_target_group" {
